@@ -14,4 +14,4 @@ rm -f /etc/ssh/ssh_host_*key*
 /bin/chmod 0700 /home/$1/.ssh
 /bin/chmod 0600 /home/$1/.ssh/authorized_keys
 
-/usr/sbin/sshd -D
+exec /usr/bin/supervisord
